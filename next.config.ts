@@ -1,0 +1,12 @@
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  output: "export",
+  distDir: process.env.DIST || "dist",
+  trailingSlash: true,
+  images: { unoptimized: true },
+  poweredByHeader: false,
+  reactStrictMode: true,
+};
+
+export default nextConfig;
