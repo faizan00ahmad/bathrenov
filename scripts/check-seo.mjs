@@ -3,7 +3,7 @@ import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 const walk = (d) => readdirSync(d).flatMap((f) => (statSync(join(d, f)).isDirectory() ? walk(join(d, f)) : [join(d, f)]));
-const files = walk(process.argv[2] || "dist").filter((f) => f.endsWith("index.html"));
+const files = walk(process.argv[2] || "out").filter((f) => f.endsWith("index.html"));
 const titles = new Set();
 let bad = 0;
 for (const f of files) {
