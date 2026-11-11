@@ -16,5 +16,5 @@ Content lives in `src/data/services.ts` and `src/data/content.ts`. Hero video cr
 
 ## Deploy on Vercel
 1. Push to GitHub, then in Vercel choose **Add New → Project** and import the repo.
-2. Framework is auto-detected (Next.js, static export → `out`); `vercel.json` already sets headers and the output folder. No env vars needed.
+2. Framework is auto-detected (Next.js, static export → `out`); `vercel.json` only adds headers; leave Output Directory empty (do not set it to `out`). No env vars needed.
 3. After the first deploy, set the real domain in `src/config/site.ts` (`url`), redeploy, and submit `https://<domain>/sitemap.xml` in Google Search Console.
